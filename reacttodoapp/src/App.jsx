@@ -63,8 +63,8 @@ function App() {
           {todo.map((item, index) => (
             <div key={index} className="todo-card">
               <div className="text-box">
-                <h1 className="todo-heading">Title  : {item.title}</h1>
-                <h2 className="todo-sub">description : {item.description}</h2>
+                <h2 className="todo-heading">Title  : {item.title}</h2>
+                <h3 className="todo-sub">description : {item.description}</h3>
               </div>
 
               <div className="action-buttons">
