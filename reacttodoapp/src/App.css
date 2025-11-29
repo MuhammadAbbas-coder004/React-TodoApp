@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* GRADIENT BACKGROUND ANIMATION */
+body {
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #eb575c, #f58364, #a960fd, #56bff0);
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+  padding: 40px 20px;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* PAGE TITLE */
+.title {
+  text-align: center;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  animation: floatHeading 3s ease-in-out infinite;
+}
+
+@keyframes floatHeading {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* CONTAINER */
+.container {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* FORM */
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  background: rgba(245, 245, 245, 0.25);
+  padding: 30px;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+}
+
+/* INPUTS */
+.input-field,
+.input-area {
+  width: 100%;
+  padding: 18px;
+  font-size: 19px;
+  border: none;
+  border-radius: 14px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.85);
+  transition: 0.3s;
+}
+
+.input-field:focus,
+.input-area:focus {
+  background: #fff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+.input-area {
+  height: 130px;
+  resize: none;
+}
+
+/* ADD BUTTON */
+.btn {
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.add-btn {
+  background: #00e676;
+  color: white;
+}
+
+.add-btn:hover {
+  background: #00c667;
+  transform: translateY(-3px) scale(1.03);
+}
+
+/* TODO CARD */
+.todo-card {
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.28);
+  padding: 25px;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeUp 0.7s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  0% { transform: translateY(25px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* TEXT AREA FOR TITLE AND DESCRIPTION */
+.text-box {
+  max-width: 70%;
+}
+
+.todo-heading {
+  font-size: 28px;
+  color: #fff7f7;
+  margin-bottom: 6px;
+}
+
+.todo-sub {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+/* ACTION BUTTONS */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.action-buttons .btn {
+  padding: 10px 14px;
+  font-size: 15px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+/* EDIT BTN */
+.edit {
+  background: #ffeb3b;
+  color: #333;
+}
+
+.edit:hover {
+  background: #e4d333;
+  transform: translateY(-3px) scale(1.07);
+}
+
+/* DELETE BTN */
+.delete {
+  background: #ff5252;
+  color: white;
+}
+
+.delete:hover {
+  background: #e64545;
+  transform: translateY(-3px) scale(1.07);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .todo-card {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .text-box {
+    max-width: 100%;
+  }
+
+  .action-buttons {
+    justify-content: center;
+  }
+}
+
