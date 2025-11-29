@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import "./App.css";
+import "./style.css";
 
 function App() {
   const [todo, setTodo] = useState([]);
@@ -63,8 +63,8 @@ function App() {
           {todo.map((item, index) => (
             <div key={index} className="todo-card">
               <div className="text-box">
-                <h1 className="todo-heading">{item.title}</h1>
-                <h2 className="todo-sub">{item.description}</h2>
+                <h1 className="todo-heading">Title  : {item.title}</h1>
+                <h2 className="todo-sub">description : {item.description}</h2>
               </div>
 
               <div className="action-buttons">
