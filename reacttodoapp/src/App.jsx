@@ -49,8 +49,7 @@ function App() {
             type="text"
             placeholder="Enter Title..."
             className="input-field"
-            ref={titleRef}
-          />
+            ref={titleRef}/>
           <textarea
             placeholder="Enter Description..."
             className="input-area"
